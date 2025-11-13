@@ -10,6 +10,7 @@ export const updateNote = (notes, idToUpdate, dataToAdd) => {
   dataToUpdate.title = title;
   dataToUpdate.content = content;
   dataToUpdate.hasDone = hasDone;
+  dataToUpdate.updatedAt = new Date();
 
   return dataToUpdate;
 };
