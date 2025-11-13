@@ -24,7 +24,7 @@ const userInputForId = () => {
   return userInputForId();
 };
 
-const askAllFeilds = () => {
+const inputsForAllFields = () => {
   const title = userInputForTitle();
   const content = userInputForContent();
   const hasDoneResponse = userInputForHasDoneResponse();
@@ -39,10 +39,10 @@ const main = () => {
     );
     switch (want) {
       case "1":
-        addNote(notes, askAllFeilds());
+        addNote(notes, inputsForAllFields());
         break;
       case "2":
-        updateNote(notes, userInputForId(), askAllFeilds());
+        updateNote(notes, userInputForId(), inputsForAllFields());
         break;
       case "3":
         console.log(allNotes(notes));
