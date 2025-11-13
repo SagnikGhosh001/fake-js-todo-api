@@ -4,6 +4,6 @@ export const notesById = (notes, noteId) => {
     console.log("Enter Valid Note Id");
     return;
   }
-
-  return note;
+  const { title, content, hasDone } = note;
+  return { title, content, hasDone };
 };
