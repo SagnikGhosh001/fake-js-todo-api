@@ -4,6 +4,7 @@ import { updateNote } from "./src/update_note.js";
 import { allNotes } from "./src/see_all_notes.js";
 import { notes } from "./src/data.js";
 import { notesById } from "./src/see_notes_by_id.js";
+import { deleteById } from "./src/delete_by_id.js";
 
 const userInputForTitle = () => takingInput("Title").trim();
 
@@ -35,7 +36,7 @@ const inputsForAllFields = () => {
 const main = () => {
   do {
     const want = prompt(
-      "\nPress\n1 for add\n2 for update\n3 for show\n4 for see perticuler note\n5 for exit\npress:",
+      "\nPress\n1 for add\n2 for update\n3 for show\n4 for see perticuler note\n5. for delete\n6 for exit\npress:",
     );
     switch (want) {
       case "1":
@@ -49,6 +50,9 @@ const main = () => {
         break;
       case "4":
         console.log(notesById(notes, userInputForId()));
+        break;
+      case "5":
+        console.log(deleteById(notes, userInputForId()));
         break;
       default:
         Deno.exit();
