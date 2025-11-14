@@ -39,10 +39,10 @@ const main = () => {
     );
     switch (want) {
       case "1":
-        addNote(notes, inputsForAllFields());
+        console.log(addNote(notes, inputsForAllFields()));
         break;
       case "2":
-        updateNote(notes, userInputForId(), inputsForAllFields());
+        console.log(updateNote(notes, userInputForId(), inputsForAllFields()));
         break;
       case "3":
         console.log(allNotes(notes));
