@@ -36,7 +36,7 @@ const inputsForAllFields = () => {
 const main = () => {
   do {
     const want = prompt(
-      "\nPress\n1 for add\n2 for update\n3 for show\n4 for see perticuler note\n5. for delete\n6 for exit\npress:",
+      "\nPress\n1 for add\n2 for update\n3 for show\n4 for see particular note\n5. for delete\n6 for exit\npress:",
     );
     switch (want) {
       case "1":
