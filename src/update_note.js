@@ -7,9 +7,9 @@ export const updateNote = (notes, idToUpdate, dataToAdd) => {
     return;
   }
 
-  dataToUpdate.title = title;
-  dataToUpdate.content = content;
-  dataToUpdate.hasDone = hasDone;
+  dataToUpdate.title = title || dataToUpdate.title;
+  dataToUpdate.content = content || dataToUpdate.content;
+  dataToUpdate.hasDone = hasDone || dataToUpdate.hasDone;
   dataToUpdate.updatedAt = new Date();
 
   return dataToUpdate;
