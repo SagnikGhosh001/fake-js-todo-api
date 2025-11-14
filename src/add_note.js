@@ -1,6 +1,7 @@
+import { generateUniqueId } from "./generate_unique_id.js";
 export const addNote = (notes, dataToAdd) => {
   const { title, content, hasDone } = dataToAdd;
-  const id = notes.length + 1;
+  const id = generateUniqueId(notes);
   notes.push({
     id,
     title,
